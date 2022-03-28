@@ -1,0 +1,4 @@
+tokenizer1
+__pycache__
+*.txt
+.ipynb_checkpoints
