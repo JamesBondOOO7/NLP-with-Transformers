@@ -16,8 +16,8 @@ def subword_tkn_auto(text, logs=False):
     
     # The AutoTokenizer class belongs to a larger set of “auto” classes whose job is to automatically retrieve the model’s configuration, pretrained weights, or vocabulary from the name of the checkpoint.
     
+    # model_ckpt = "distilbert-base-uncased"
     # tokenizer = AutoTokenizer.from_pretrained(model_ckpt)
-    # tokenizer.save_pretrained('./tokenizer1')
     
     # ----------------- Extra -------------------
     # FASTER !!
