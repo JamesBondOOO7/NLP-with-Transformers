@@ -5,6 +5,7 @@ from numpy import extract
 from hf_datasets import loading_dataset
 from dataset_tokenization import getTokenizer, tokenize
 import config
+from utils import *
 
 from transformers import AutoModel
 import torch
@@ -94,3 +95,13 @@ if __name__ == '__main__':
     
     print(dataset_hidden)
     # print(dataset_hidden["train"].column_names)
+    
+    # Some EDA on the processed data
+    X_train, X_valid, y_train, y_valid = get_numpy_array(dataset_hidden)
+    
+    # Lower dimensional data for visualization --> dataframe of 2d embeddings
+    df_emb = get_visualization_dataframe(X_train, y_train)
+    
+    # Visualization
+    visualize_data(dataset, df_emb)
+    
